@@ -1,0 +1,11 @@
+version: '3'
+services:
+  api:
+    image: "api:latest"
+    build:
+      context: api
+      dockerfile: "./build/Dockerfile"
+    volumes:
+      - ./api:/api
+    ports:
+      - "8000:8000"
